@@ -1,0 +1,30 @@
+extends layout
+
+block title
+	title= "Zaya Test"
+
+block content
+	.body
+		div.text-center
+			p(style="font-size: 3em; font-weight: bold; margin-top: 0.5em;")= "Zaya Test"
+			p(style="color: #999; margin-top: -1em;")= "Python Developer Question"
+
+
+		div.text-left(style="margin: 5em auto; width: 600px;")
+			span Create User
+				pre
+					span POST /api/v1/account/ 
+					br
+					span {"username":"vibhaj", "email": "vibhaj8@gmail.com", "password":"abc", "age": 24}
+
+			span Add Attendance
+				pre
+					span POST /api/v1/atendance/
+					br
+					span {"owner":"/api/v1/user/vibhaj/"}
+
+			span Update Points
+				pre
+					span POST /api/v1/points/
+					br
+					span {"owner":"/api/v1/user/vibhaj/", "behaviour": "/api/v1/behaviour/helping/"}
